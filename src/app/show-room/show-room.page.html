@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>showRoom</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card (click)="showPopUp(produto)" *ngFor="let produto of produtos">
+      <img src={{produto.foto}}/> 
+      <ion-card-header>
+        <ion-card-subtitle>{{produto.categoria}}</ion-card-subtitle>
+        <ion-card-title>{{produto.nome}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{produto.descricao}}
+        {{produto.preco}}
+      </ion-card-content>
+    
+  </ion-card>
+</ion-content>
